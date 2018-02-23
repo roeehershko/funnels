@@ -1,0 +1,988 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Oswald:400,500,600,700|Roboto:300,300i,400,400i,700,700i,900,900i");
+body {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  color: #333333;
+}
+
+/* Overrides */
+.nospace {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nomargin {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.clr {
+  clear: left;
+}
+
+.ninja {
+  display: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.fs16 {
+  font-size: 16px;
+}
+
+.fs13 {
+  font-size: 13px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-red {
+  color: #e93347;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-bluelight {
+  color: #b8f3fc;
+}
+
+.text-orange {
+  color: #ff9000;
+}
+
+.text-blue {
+  color: #4c6fd6;
+}
+
+.text-pink {
+  color: #b50256;
+}
+
+.text-green {
+  color: #08d908;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.padding-tb-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.padding-tb-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.padding-tb-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.padding-tb-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.padding-tb-60 {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.padding-tb-80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.padding-tbl-20 {
+  padding: 20px 0 20px 20px;
+}
+
+.padding-tbr-20 {
+  padding: 20px 20px 20px 0;
+}
+
+.gap20 {
+  height: 20px;
+}
+
+.gap40 {
+  height: 40px;
+}
+
+.gap40-mobile {
+  height: 40px;
+}
+
+.spacer {
+  height: 10px;
+  background: #f7f8fa;
+}
+
+.spacer2 {
+  height: 10px;
+  background: #e7e7e7;
+  border-top: 1px #e1e1e1 solid;
+  border-bottom: 1px #e1e1e1 solid;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  border: 1px #7c3ed8 solid;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.row.vdivide [class*='col-']:after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
+}
+
+.row.vdivide [class*='col-']:first-child:before {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 70px;
+}
+
+/* Sections */
+.section1 {
+  background: url(../img/section1bg.jpg) top center no-repeat;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-size: cover;
+}
+
+.section1 header {
+  background: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+header .media h5 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  padding: 0;
+  margin: 5px 0;
+}
+
+header .media h5 strong {
+  font-weight: 900;
+}
+
+header .media p, header .media h3 {
+  padding: 0;
+  margin: 0;
+}
+
+header .notification-top {
+  background: #392b6f;
+  border-radius: 50px;
+  border: 4px #e3e3e3 solid;
+  width: auto;
+  padding: 5px;
+  display: inline-block;
+}
+
+header .notification-top p {
+  color: #ffffff;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+header .notification-top h3 {
+  color: #08d908;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+header .notification-top .media-body {
+  text-align: center;
+}
+
+.headline {
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headline h1 {
+  font-size: 54px;
+  font-weight: 900;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.headline h2 {
+  font-size: 40px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.headline h4 {
+  font-size: 22px;
+  font-weight: 300;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.headline h4 strong {
+  color: #32e732;
+}
+
+/*FORM*/
+.formwrap-outer {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px #7d73a4 solid;
+  padding: 10px;
+}
+
+.formwrap {
+  background: #ffffff;
+}
+
+.form-header {
+  background: #1c163b;
+  padding: 20px 20px 35px 20px;
+  color: #ffffff;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 500;
+  border-bottom: 4px #08d908  solid;
+}
+
+.form-body {
+  padding: 20px 20px;
+  padding-bottom:5px;
+  position: relative;
+  margin-top: -45px;
+}
+
+.form-body .form-control {
+  border-radius: 0;
+  background: #e7e7e7;
+  font-weight: 300;
+  height: 40px;
+}
+
+.form-body button {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 0.5px 0.866px 0px rgba(1, 198, 0, 0.35);
+  border-radius: 4px;
+  text-transform: uppercase;
+  padding: 8px 25px;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0be00b+0,01c601+100 */
+  background: #0be00b;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #0be00b 0%, #01c601 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0be00b', endColorstr='#01c601',GradientType=0 );
+  /* IE6-9 */
+}
+
+.form-body button:focus, .form-body button:hover {
+  color: #ffffff;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#01c601+0,0be00b+100 */
+  background: #01c601;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #01c601 0%, #0be00b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01c601', endColorstr='#0be00b',GradientType=0 );
+  /* IE6-9 */
+}
+
+.progbar {
+  padding: 0 0 30px 0;
+}
+
+.progbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  text-align: center;
+}
+
+.progbar ul li {
+  display: inline-block;
+  padding: 7px;
+  width: 45px;
+  height: 45px;
+  margin: 0 20px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  border-radius: 50%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4e4e4+0,c6c7c6+100 */
+  background: #e4e4e4;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #e4e4e4 0%, #c6c7c6 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#c6c7c6',GradientType=0 );
+  /* IE6-9 */
+  border: 1px #cdcdcd solid;
+  color: #6d6d6d;
+  text-shadow: 0.5px 0.866px 0px rgba(255, 255, 255, 0.35);
+}
+
+.progbar ul li.active {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5c4b9c+0,403276+100 */
+  background: #5c4b9c;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #5c4b9c 0%, #403276 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c4b9c', endColorstr='#403276',GradientType=0 );
+  /* IE6-9 */
+  color: #ffffff;
+  border-color: #5e4c9e;
+  text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.35);
+}
+
+.progbar ul li.completed {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#08d908+0,01ba01+100 */
+  background: #08d908;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #08d908 0%, #01ba01 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08d908', endColorstr='#01ba01',GradientType=0 );
+  /* IE6-9 */
+  color: #ffffff;
+  border-color: #08d908;
+  text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.35);
+}
+
+.section2 {
+  background: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px #e7ebf3 solid;
+}
+
+.security-logos img {
+  margin: 5px 15px;
+}
+
+.security-logos {
+  text-align: center;
+}
+
+.bitcoin {
+  padding: 10px 10px 0 10px;
+  text-align: center;
+  display: inline-block;
+}
+
+.bitcoin h2 {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-weight: 900;
+}
+
+.bitcoin sup {
+  font-size: 13px;
+  padding: 0 5px;
+}
+
+.bitcoin.bid {
+  color: #f66600;
+}
+
+.bitcoin.bid h2 {
+  color: #00c500;
+}
+
+.bitcoin.ask {
+  color: #9f91b4;
+}
+
+.bitcoin.ask h2 {
+  color: #9f91b4;
+}
+
+.section3 {
+  background: #f7f8fa;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.section3 h1 {
+  color: #261e52;
+  font-weight: 900;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.section3 h1 strong {
+  color: #4a0ba7;
+}
+
+.section3 p {
+  font-size: 16px;
+  color: #4f4879;
+  font-weight: 300;
+}
+
+.section4 {
+  background: url(../img/section4bg.jpg) bottom center no-repeat, #382e86;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.whitebox {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 4px 20px 0px rgba(100, 101, 156, 0.09);
+  border: 1px #e9ebef solid;
+  text-align: center;
+  padding: 40px 30px;
+  margin: 10px 10px 20px 10px;
+}
+
+.whitebox h4 {
+  font-weight: 700;
+  color: #261e52;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.whitebox p {
+  color: #4f4879;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.section5 {
+  position: relative;
+  height: 200px;
+}
+
+.section5 ul {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.section5 li {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: 20%;
+  height: 200px;
+  float: left;
+}
+
+.section5 li:nth-child(1) {
+  background: url(../img/testimonial1.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.section5 li:nth-child(2) {
+  background: url(../img/testimonial2.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.section5 li:nth-child(3) {
+  background: url(../img/testimonial3.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.section5 li:nth-child(4) {
+  background: url(../img/testimonial4.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.section5 li:nth-child(5) {
+  background: url(../img/testimonial5.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.transwhite {
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+  border: 1px #ffffff solid;
+}
+
+.transwhite h1 {
+  padding: 0;
+  margin: 0;
+  color: #261e52;
+  font-weight: 900;
+  text-shadow: 1px 1.732px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section6 {
+  background: #f7f8fa;
+}
+
+.testimonial-wrap {
+  padding: 30px 20px;
+}
+
+.testimonial-wrap p {
+  color: #4f4879;
+  text-align: center;
+  font-weight: 300;
+}
+
+.testimonial-wrap h4 {
+  color: #4a0ba7;
+  font-weight: 900;
+  padding: 0;
+  margin: 30px 0 0 0;
+}
+
+.testimonial-wrap h5 {
+  color: #988ea6;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+}
+
+.testimonial-wrap .media {
+  margin-bottom: 20px;
+}
+
+.section7 {
+  background: url(../img/howitworks.jpg) top left no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.section7 h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 900;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.section7 .howbox {
+  text-align: center;
+}
+
+.section7 h4 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0;
+  margin: 0 0 20px 0;
+  min-height: 50px;
+  line-height: normal;
+}
+
+h4.step-title {
+  font-weight: 900;
+  color: #32e732;
+  font-size: 24px;
+  padding: 0;
+  margin: 20px 0 10px 0;
+  min-height: auto;
+}
+
+.section7 p {
+  color: #b7b4fa;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.section8 {
+  background: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.section8 h1 {
+  padding: 0;
+  margin: 0 0 40px 0;
+  color: #261e52;
+  font-weight: 900;
+  text-shadow: 1px 1.732px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section8 .media h2 {
+  padding: 0;
+  margin: 5px 0;
+  font-weight: 900;
+  color: #7950b5;
+}
+
+.section8 .media p {
+  color: #4f4879;
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.section8 .media img {
+  margin-right: 15px;
+}
+
+.section8 .media p strong {
+  font-weight: 900;
+  color: #20b820;
+}
+
+.section9 {
+  background: #f7f8fa;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px #e1e1e1 solid;
+}
+
+.btn-start {
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  color: #ffffff;
+  text-shadow: 0.5px 0.866px 0px rgba(1, 198, 0, 0.35);
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0be00b+0,01c601+100 */
+  background: #0be00b;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #0be00b 0%, #01c601 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0be00b', endColorstr='#01c601',GradientType=0 );
+  /* IE6-9 */
+}
+
+.btn-start:hover, .btn-start:focus {
+  color: #ffffff;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#01c601+0,0be00b+100 */
+  background: #01c601;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #01c601 0%, #0be00b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01c601', endColorstr='#0be00b',GradientType=0 );
+  /* IE6-9 */
+}
+
+.section10 {
+  background: #382e86;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #1d1555;
+}
+
+.section10 a {
+  display: inline-block;
+  padding: 4px 10px;
+  color: #8179c2;
+  font-weight: 300;
+}
+
+.section10 a:hover, .section10 a:focus {
+  color: #8179c2;
+}
+
+footer {
+  background: #1a1257;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px #413695 solid;
+  color: #4e43a2;
+}
+
+footer p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media screen and (max-width: 400px) {
+  @-ms-viewport {
+    width: 320px;
+  }
+  .form-header {
+    font-size: 28px !important;
+    line-height: 30px !important;
+  }
+  .progbar ul li {
+    margin: 0 10px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    text-align: center;
+  }
+  .logo img {
+    width: 250px;
+  }
+  .section1 header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  .section1 {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  .headline h1 {
+    font-size: 36px;
+  }
+  .headline h2 {
+    font-size: 22px;
+  }
+  .headline h4 {
+    font-size: 18px;
+  }
+  .gap40-mobile {
+    height: 0;
+  }
+  .formwrap {
+    margin-top: 20px;
+  }
+  .bitcoin {
+    padding: 10px 0 0 0;
+  }
+  .section3 h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .section3 {
+    padding-bottom: 60px;
+  }
+  .whitebox.first-box {
+    margin-top: -80px;
+  }
+  .section5 li {
+    height: 150px;
+    width: 33.33%;
+  }
+  .section5 li:nth-child(4) {
+    display: none;
+  }
+  .section5 li:nth-child(5) {
+    display: none;
+  }
+  .section5 {
+    height: 150px;
+  }
+  .transwhite h1 {
+    font-size: 24px;
+  }
+  .testimonial-wrap .media {
+    width: 280px;
+    margin: 20px auto;
+  }
+  .section8 h1 {
+    font-size: 24px;
+  }
+  .section8 .media h2 {
+    font-size: 20px;
+  }
+  .section8 .media p {
+    font-size: 16px;
+  }
+  .section8 .media img {
+    margin-right: 8px;
+  }
+  .btn-start {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .headline h1 {
+    font-size: 40px;
+  }
+  .headline h2 {
+    font-size: 30px;
+  }
+  .headline h4 {
+    font-size: 20px;
+  }
+  .form-header {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .section3 p {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .whitebox.first-box {
+    margin-top: -80px;
+  }
+  .section3 {
+    padding-bottom: 60px;
+  }
+  .section5 {
+    height: 150px;
+  }
+  .section5 li {
+    height: 150px;
+  }
+  .transwhite h1 {
+    font-size: 24px;
+  }
+  .testimonial-wrap .media {
+    width: 280px;
+    margin: 20px auto;
+  }
+  .row.vdivide [class*='col-']:after, .row.vdivide [class*='col-']:first-child:before {
+    display: none;
+  }
+  .progbar ul li {
+    margin: 0 10px;
+  }
+  .form-header {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .security-logos img {
+    margin: 5px 10px;
+  }
+  .bitcoin {
+    padding: 10px 0 0 0;
+  }
+  .section3 p {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .whitebox {
+    min-height: 500px;
+  }
+  .whitebox {
+    min-height: 420px;
+    margin-top: -80px;
+  }
+  .testimonial-wrap {
+    min-height: 430px;
+  }
+  .testimonial-wrap {
+    padding: 30px 10px;
+  }
+  .form-header {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .progbar ul li {
+    margin: 0 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section3 p {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .section3 h1 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  .whitebox {
+    min-height: 420px;
+    margin-top: -80px;
+  }
+  .testimonial-wrap {
+    min-height: 390px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
+
+
+
+
+/* DEJAN */
+
+.flag-wrapper {position:absolute; right:0; margin-left:10px;}
+.exc {padding-right:75px!important;}
+@media(max-width:767px){
+    .logo img {width:150px;}
+    .headline h1 {font-size: 20px !important;}
+    .headline h2 {font-size: 16px;}
+    .headline h4 {font-size: 12px;}
+}
