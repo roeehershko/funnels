@@ -1,0 +1,25 @@
+version: "3.3"
+services:
+  funnels_nginx:
+    build: ./funnels
+    networks:
+      - backend
+    ports:
+      - 90:80
+    volumes:
+      - ./funnels:/var/www/html
+    restart: always
+    env_file:
+      - .env
+  funnelws:
+    build: ./ws
+    volumes:
+      - ./ws:/app
+    networks:
+      - backend
+    ports:
+      - 4000:3000
+    environment:
+      NODE_ENV: development
+networks:
+  backend:

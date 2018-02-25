@@ -3,12 +3,90 @@
    ========================================================================== */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Oswald:400,500,600,700|Roboto:300,300i,400,400i,700,700i,900,900i");
 body {
-  background: #ffffff;
-  margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
   color: #333333;
+  max-width: 1900px;
+  background: #333;
+  margin: auto;
+}
+
+/* Common */
+h4.logo-small {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+h4.logo-small img {
+  width: 40px;
+}
+
+h4.logo-small span {
+  color: orange;
+  font-weight: 300;
+}
+
+.color-primary {
+  color: orange;
+}
+
+.color-green {
+  color: #00b700;
+}
+
+.color-red {
+  color: red;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo h2 {
+  font-family: Roboto;
+  width: 100%;
+  margin: 0;
+  font-weight: 900;
+  font-size: 46px;
+}
+
+.logo h2 img {
+  width: 62px;
+}
+
+.logo h2 span {
+  font-weight: normal;
+  color: orange;
+}
+
+/* Notifications */
+.notify-container {
+  position: fixed;
+  width: 360px;
+  top: 23px;
+  right: 25px;
+  z-index: 2;
+}
+
+.notify {
+  width: 360px;
+  background: #000;
+  background-size: cover;
+  margin: auto;
+  left: 0;
+  border: 2px solid orange;
+  outline: 2px solid #171717;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.notify img {
+  width: 36px;
+  float: left;
+  margin-right: 17px;
 }
 
 /* Overrides */
@@ -87,7 +165,7 @@ body {
 }
 
 .text-green {
-  color: #08d908;
+  color: orange;
 }
 
 .inline-block {
@@ -146,7 +224,7 @@ body {
 
 .spacer {
   height: 10px;
-  background: #f7f8fa;
+  background: #fff;
 }
 
 .spacer2 {
@@ -159,10 +237,12 @@ body {
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
-  height: 0;
+  /* height: 428px; */
   overflow: hidden;
   max-width: 100%;
-  border: 1px #7c3ed8 solid;
+  /* border: 5px #ffa500 solid; */
+  padding: 0;
+  /* box-shadow: 0 0 2px 1px rgba(255,255,255,0.7); */
 }
 
 .embed-container iframe, .embed-container object, .embed-container embed {
@@ -199,10 +279,14 @@ body {
 
 /* Sections */
 .section1 {
-  background: url(../img/section1bg.jpg) top center no-repeat;
-  padding-top: 10px;
+  background: url(../img/bg.jpg);
+  position: relative;
   padding-bottom: 30px;
-  background-size: cover;
+  background-size: contain;
+}
+
+.section1#top:focus {
+  outline: none;
 }
 
 .section1 header {
@@ -265,6 +349,7 @@ header .notification-top .media-body {
   font-weight: 900;
   padding: 0;
   margin: 0 0 10px 0;
+  color: orange;
 }
 
 .headline h2 {
@@ -282,13 +367,13 @@ header .notification-top .media-body {
 }
 
 .headline h4 strong {
-  color: #32e732;
+  color: orange;
 }
 
 /*FORM*/
 .formwrap-outer {
   background: rgba(0, 0, 0, 0.4);
-  border: 1px #7d73a4 solid;
+  border: 3px #ffffff solid;
   padding: 10px;
 }
 
@@ -297,7 +382,7 @@ header .notification-top .media-body {
 }
 
 .form-header {
-  background: #1c163b;
+  background: #171717;
   padding: 20px 20px 35px 20px;
   color: #ffffff;
   font-size: 40px;
@@ -306,7 +391,7 @@ header .notification-top .media-body {
   line-height: 40px;
   text-align: center;
   font-weight: 500;
-  border-bottom: 4px #08d908  solid;
+  border-bottom: 4px #ffa500  solid;
 }
 
 .form-body {
@@ -341,11 +426,13 @@ header .notification-top .media-body {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0be00b', endColorstr='#01c601',GradientType=0 );
   /* IE6-9 */
+  background: orange;
 }
 
 .form-body button:focus, .form-body button:hover {
   color: #ffffff;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#01c601+0,0be00b+100 */
+  background: red;
   background: #01c601;
   /* Old browsers */
   /* FF3.6-15 */
@@ -354,6 +441,7 @@ header .notification-top .media-body {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01c601', endColorstr='#0be00b',GradientType=0 );
   /* IE6-9 */
+  background: orange;
 }
 
 .progbar {
@@ -403,8 +491,9 @@ header .notification-top .media-body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c4b9c', endColorstr='#403276',GradientType=0 );
   /* IE6-9 */
   color: #ffffff;
-  border-color: #5e4c9e;
+  border-color: #ffa500;
   text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.35);
+  background: orange;
 }
 
 .progbar ul li.completed {
@@ -427,6 +516,7 @@ header .notification-top .media-body {
   padding-top: 10px;
   padding-bottom: 10px;
   border: 1px #e7ebf3 solid;
+  /* box-shadow: 0 0 1px 1px; */
 }
 
 .security-logos img {
@@ -445,6 +535,7 @@ header .notification-top .media-body {
 
 .bitcoin h2 {
   display: inline-block;
+  font-size: 24px;
   padding: 0;
   margin: 0;
   font-weight: 900;
@@ -456,11 +547,13 @@ header .notification-top .media-body {
 }
 
 .bitcoin.bid {
-  color: #f66600;
+  /* color: #f66600; */
 }
 
 .bitcoin.bid h2 {
-  color: #00c500;
+  /* color: #00c500; */
+  margin-left: 15px;
+  margin-top: 4px;
 }
 
 .bitcoin.ask {
@@ -472,21 +565,21 @@ header .notification-top .media-body {
 }
 
 .section3 {
-  background: #f7f8fa;
+  background: #fff;
   padding-top: 40px;
   padding-bottom: 80px;
   text-align: center;
 }
 
 .section3 h1 {
-  color: #261e52;
+  color: #333333;
   font-weight: 900;
   padding: 0;
   margin: 0 0 20px 0;
 }
 
 .section3 h1 strong {
-  color: #4a0ba7;
+  color: #ffa500;
 }
 
 .section3 p {
@@ -530,7 +623,7 @@ header .notification-top .media-body {
 
 .section5 {
   position: relative;
-  height: 200px;
+  height: 96px;
 }
 
 .section5 ul {
@@ -588,7 +681,7 @@ header .notification-top .media-body {
 .transwhite h1 {
   padding: 0;
   margin: 0;
-  color: #261e52;
+  color: orange;
   font-weight: 900;
   text-shadow: 1px 1.732px 4px rgba(0, 0, 0, 0.1);
 }
@@ -626,15 +719,15 @@ header .notification-top .media-body {
 }
 
 .section7 {
-  background: url(../img/howitworks.jpg) top left no-repeat;
-  background-size: cover;
+  background: url(../img/bg.jpg);
+  background-size: 50%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
 .section7 h1 {
   text-align: center;
-  color: #ffffff;
+  color: orange;
   font-weight: 900;
   padding: 0;
   margin: 0 0 30px 0;
@@ -642,6 +735,17 @@ header .notification-top .media-body {
 
 .section7 .howbox {
   text-align: center;
+}
+
+.howbox .glyphicon {
+  font-size: 80px;
+  color: #fff;
+  border: 4px solid orange;
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  padding-top: 30px;
+  margin-top: 28px;
 }
 
 .section7 h4 {
@@ -656,7 +760,7 @@ header .notification-top .media-body {
 
 h4.step-title {
   font-weight: 900;
-  color: #32e732;
+  color: orange;
   font-size: 24px;
   padding: 0;
   margin: 20px 0 10px 0;
@@ -664,7 +768,7 @@ h4.step-title {
 }
 
 .section7 p {
-  color: #b7b4fa;
+  color: #fff;
   font-size: 16px;
   font-weight: 300;
 }
@@ -687,7 +791,7 @@ h4.step-title {
   padding: 0;
   margin: 5px 0;
   font-weight: 900;
-  color: #7950b5;
+  color: #333;
 }
 
 .section8 .media p {
@@ -716,32 +820,14 @@ h4.step-title {
   font-family: 'Oswald', sans-serif;
   font-size: 40px;
   color: #ffffff;
-  text-shadow: 0.5px 0.866px 0px rgba(1, 198, 0, 0.35);
   border-radius: 10px;
   text-transform: uppercase;
   padding: 10px 20px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0be00b+0,01c601+100 */
-  background: #0be00b;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #0be00b 0%, #01c601 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0be00b', endColorstr='#01c601',GradientType=0 );
-  /* IE6-9 */
+  background: orange;
 }
 
 .btn-start:hover, .btn-start:focus {
   color: #ffffff;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#01c601+0,0be00b+100 */
-  background: #01c601;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #01c601 0%, #0be00b 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01c601', endColorstr='#0be00b',GradientType=0 );
-  /* IE6-9 */
 }
 
 .section10 {
@@ -763,11 +849,10 @@ h4.step-title {
 }
 
 footer {
-  background: #1a1257;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-top: 1px #413695 solid;
-  color: #4e43a2;
+  background: #000;
+  padding: 12px 0;
+  border-top: 3px orange solid;
+  color: #fff;
 }
 
 footer p {
@@ -981,8 +1066,90 @@ footer p {
 .flag-wrapper {position:absolute; right:0; margin-left:10px;}
 .exc {padding-right:75px!important;}
 @media(max-width:767px){
-    .logo img {width:150px;}
-    .headline h1 {font-size: 20px !important;}
-    .headline h2 {font-size: 16px;}
-    .headline h4 {font-size: 12px;}
+  .logo img {width:150px;}
+  .headline h1 {font-size: 20px !important;}
+  .headline h2 {font-size: 16px;}
+  .headline h4 {font-size: 12px;}
+}
+
+/*COMBINATION */
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-bottom: 5px solid black;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid #f00;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+
+  border-left: 60px solid green;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-right:10px solid blue;
+}
+
+/* Assets */
+
+.bitcoin.bid   h2 {
+  display: block;
+  float: right;
+}
+
+.bitcoin.bid h2 .glyphicon {
+  display: block;
+  float: right;
+  margin: -2px 4px 0 9px;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.bitcoin.bid h2.green span {
+  color: #00b700;
+}
+
+.bitcoin.bid h2.green .glyphicon.glyphicon-triangle-bottom {
+  display: none;
+}
+
+.bitcoin.bid h2.red span {
+  color: red;
+}
+
+.bitcoin.bid h2.red .glyphicon.glyphicon-triangle-top {
+  display: none;
+}
+
+/* FAQ */
+.q-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-right: 20px;
+  BACKGROUND: orange;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  font-weight: bold;
 }
