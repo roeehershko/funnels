@@ -47,7 +47,7 @@
             }
         });
 
-    let socket = io('//192.168.99.100:4000');
+    let socket = io('//46.101.146.71:4000');
     let notifyHTML = $('#notify-template').html();
     let animations = [ 'pulse', 'flash', 'shake' ];
     socket.on('profit', function (profit) {

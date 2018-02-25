@@ -5,16 +5,12 @@ services:
     networks:
       - backend
     ports:
-      - 90:80
-    volumes:
-      - ./funnels:/var/www/html
+      - 80:80
     restart: always
     env_file:
       - .env
   funnelws:
     build: ./ws
-    volumes:
-      - ./ws:/app
     networks:
       - backend
     ports:
