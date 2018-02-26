@@ -1,3 +1,4 @@
 ws/node_modules
 platform-proxy/node_modules
 .env
+.idea
