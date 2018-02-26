@@ -196,7 +196,7 @@
                         first_name: $('input[name=name]').val().split(' ')[0] || '',
                         last_name: $('input[name=name]').val().split(' ')[1] || '',
                         email: $('input[name=email]').val(),
-                        phone: $("#phone").intlTelInput("getSelectedCountryData").dialCode + $('input[name=phone]').val(),
+                        phone: $("#phone_number").intlTelInput("getSelectedCountryData").dialCode + $('input[name=phone]').val(),
                         country: 'gb',
                         password: $('input[name=password]').val()
 
