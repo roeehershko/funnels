@@ -28,6 +28,6 @@ function pushProfit() {
 
     setTimeout(function () {
         pushProfit();
-    }, Math.random() * 10000)
+    }, (Math.random() * 10000) + 5000)
 }
 pushProfit();

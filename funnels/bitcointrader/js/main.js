@@ -50,23 +50,26 @@
     let socket = io('//46.101.146.71:4000');
     let notifyHTML = $('#notify-template').html();
     let animations = [ 'pulse', 'flash', 'shake' ];
-    socket.on('profit', function (profit) {
-        let profitHTML = notifyHTML;
-        profitHTML = profitHTML.replace('{{ name }}', profit.name);
-        profitHTML = profitHTML.replace('{{ profit }}', profit.amount.formatMoney(0));
-        let $profitEl = $(profitHTML);
-        let animation = animations[Math.floor(Math.random() * animations.length)];
-        $profitEl.addClass('animated ' + animation);
 
-        $('.notify-container').append($profitEl);
+    setTimeout(function () {
+        socket.on('profit', function (profit) {
+            let profitHTML = notifyHTML;
+            profitHTML = profitHTML.replace('{{ name }}', profit.name);
+            profitHTML = profitHTML.replace('{{ profit }}', profit.amount.formatMoney(0));
+            let $profitEl = $(profitHTML);
+            let animation = animations[Math.floor(Math.random() * animations.length)];
+            $profitEl.addClass('animated ' + animation);
 
-        setTimeout(function () {
-            $profitEl.removeClass(animation).addClass('zoomOut');
+            $('.notify-container').append($profitEl);
+
             setTimeout(function () {
-                $profitEl.remove();
-            }, 1000);
-        }, 4000);
-    });
+                $profitEl.removeClass(animation).addClass('zoomOut');
+                setTimeout(function () {
+                    $profitEl.remove();
+                }, 500);
+            }, 4000);
+        });
+    }, 6000);
 
     socket.on('rates', function(rates){
       for(coin in rates) {
@@ -98,6 +101,119 @@
         $el.find('.rate').text(rate.formatMoney(3));
         $el.find('.rate').prop('data-rate', rate);
       }
+    });
+
+    $(function () {
+        $('#phone_number').intlTelInput({
+            initialCountry: 'GB',
+            preferredCountries: ['GB'],
+            separateDialCode: true
+        });
+        $('#step1-form').validator({ focus: false, disable: false });
+        $('#step2-form').validator({ focus: false, disable: false });
+
+        // Forms
+        $('#step1-form').on('submit', function (e) {
+            if ( ! e.isDefaultPrevented()) {
+                e.preventDefault();
+                // Add tag to tracking client - Password Form
+
+                $(this).find('.progress').removeClass('hidden');
+                $(this).find('button').prop('disabled', 'disabled');
+
+                let progress = 20;
+                let interval = setInterval(function () {
+                    if (progress >= 100) {
+                        setTimeout(function () {
+                            $('.step1').addClass('animated fadeOut');
+                            setTimeout(function () {
+                                $('.step2').removeClass('hidden').addClass('animated fadeIn');
+                                $('.step1').addClass('hidden');
+                            }, 500);
+                        }, 500);
+
+                        clearInterval(interval);
+                    }
+                    else {
+                        let plus = Math.random() * 20;
+                        if (plus < 3) plus = 0;
+
+                        progress = progress + Math.round(plus);
+                        progress = progress > 100 ? 100 : progress;
+
+                        $('#step1-form')
+                            .find('.progress .progress-bar')
+                            .css('width', progress + '%')
+                            .find('.progress-text .complete').text(progress + '%');
+                    }
+
+                }, 500);
+            }
+        });
+
+        $('.step2 form').on('submit', function (e) {
+            if ( ! e.isDefaultPrevented()) {
+                e.preventDefault();
+                // Add tag to tracking client - Password Form
+                $('.step2').addClass('animate fadeOut');
+                setTimeout(function () {
+                    $('.step2').addClass('hidden');
+                    $('.step3').removeClass('hidden');
+                }, 400)
+            }
+        });
+
+        $('.step3 form').on('submit', function (e) {
+            if ( ! e.isDefaultPrevented()) {
+                e.preventDefault();
+                $(this).find('#finish-btn').addClass('hidden');
+                $(this).find('.progress').removeClass('hidden');
+
+                let progress = 20;
+                let interval = setInterval(function () {
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                    }
+                    else {
+                        let plus = Math.random() * 20;
+                        if (plus < 3) plus = 0;
+
+                        progress = progress + Math.round(plus);
+                        progress = progress > 100 ? 100 : progress;
+
+                        $('.step3 form .progress .progress-bar')
+                            .css('width', progress + '%')
+                            .find('.progress-text .complete').text(progress + '%');
+                    }
+
+                }, 500);
+
+                $.ajax({
+                    url: 'http://api.cryptoguard.co/leads',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        first_name: $('input[name=name]').val().split(' ')[0] || '',
+                        last_name: $('input[name=name]').val().split(' ')[1] || '',
+                        email: $('input[name=email]').val(),
+                        phone: $("#phone").intlTelInput("getSelectedCountryData").dialCode + $('input[name=phone]').val(),
+                        country: 'gb',
+                        password: $('input[name=password]').val()
+
+                    }),
+                    dataType: 'json',
+                    success: function (res, status) {
+                        if (res.status === 1) {
+                            progress = 90;
+                            setTimeout(function () {
+                                location.href = res.loginUrl;
+                            }, 1000);
+                        }
+                    }
+                })
+            }
+        })
+
     });
 }());
 console.log('Socketing!');
