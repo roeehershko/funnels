@@ -17,5 +17,14 @@ services:
       - 4000:3000
     environment:
       NODE_ENV: development
+  platform-proxy:
+    build: ./platform-proxy
+    command: npm run start:prod
+    networks:
+      - backend
+    ports:
+      - 3005:3005
+    environment:
+      NODE_ENV: production
 networks:
   backend:
