@@ -29,6 +29,10 @@ export class LeadsMiddleware implements NestMiddleware {
                 }
             }
 
+            // TODO. delete after testing
+            if (req.body.country == 'il' || req.body.country == 'IL')
+                req.body.country = 'gb';
+
             res.header("Access-Control-Allow-Origin", "*");
             next();
         };
